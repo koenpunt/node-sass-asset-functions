@@ -1,8 +1,6 @@
-# Node SASS Asset functions [![Build Status](https://travis-ci.org/fetch/node-sass-asset-functions.svg?branch=master)](https://travis-ci.org/fetch/node-sass-asset-functions) [![npmjs](https://badge.fury.io/js/node-sass-asset-functions.svg)](https://www.npmjs.com/package/node-sass-asset-functions)
+# Node Sass Asset functions [![npmjs](https://badge.fury.io/js/node-sass-asset-functions.svg)](https://www.npmjs.com/package/node-sass-asset-functions)
 
-To ease the transitioning from Compass to Libsass, this module provides some of Compass' asset functions for [node-sass](https://github.com/sass/node-sass)
-
-_**NB** Please note that the `functions` option of node-sass is still experimental (>= v3.0.0)._
+This module provides some of Compass' asset functions for [dart-sass](https://www.npmjs.com/package/sass).
 
 ## Installation
 
@@ -15,7 +13,7 @@ npm install --save[-dev] node-sass-asset-functions
 Basic usage is as easy as setting the `functions` property:
 
 ```js
-var sass = require('node-sass');
+var sass = require('sass');
 var assetFunctions = require('node-sass-asset-functions');
 
 sass.render({
@@ -39,7 +37,7 @@ You can specify the paths of your resources using the following options (shown w
 So if for example your images reside in `public/img` instead of `images/images`, you use it as follows:
 
 ```js
-var sass = require('node-sass');
+var sass = require('sass');
 var assetFunctions = require('node-sass-asset-functions');
 
 sass.render({
