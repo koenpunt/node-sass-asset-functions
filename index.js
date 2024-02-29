@@ -1,4 +1,4 @@
-var sass = require('node-sass');
+var sass = require('sass');
 var Processor = require('./lib/processor');
 
 module.exports = function(options) {
@@ -8,7 +8,7 @@ module.exports = function(options) {
   return {
     'image-url($filename, $only_path: false)': function(filename, only_path, done) {
       processor.image_url(filename.getValue(), function(url) {
-        if(!only_path.getValue()) url = 'url(\'' + url + '\')';
+        if (!only_path.getValue()) url = 'url(\'' + url + '\')';
         done(new sass.types.String(url));
       });
     },
@@ -30,13 +30,13 @@ module.exports = function(options) {
     },
     'font-url($filename, $only-path: false)': function(filename, only_path, done) {
       processor.font_url(filename.getValue(), function(url) {
-        if(!only_path.getValue()) url = 'url(\'' + url + '\')';
+        if (!only_path.getValue()) url = 'url(\'' + url + '\')';
         done(new sass.types.String(url));
       });
     },
     'font-files($filenames...)': function(list, done) {
       var len = list.getLength(), i = 0, filenames = [];
-      for(; i < len; ++i) {
+      for (; i < len; ++i) {
         filenames[i] = list.getValue(i).getValue();
       }
 

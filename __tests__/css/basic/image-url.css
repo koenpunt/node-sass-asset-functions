@@ -1,5 +1,7 @@
 body {
-  background: url('/images/barney.gif') center center no-repeat; }
+  background: url('/images/barney.gif') center center no-repeat;
+}
 
 #barney {
-  content: "/images/barney.gif"; }
+  content: "/images/barney.gif";
+}
